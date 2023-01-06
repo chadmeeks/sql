@@ -26,9 +26,9 @@ SELECT localtimestamp; -- timestamp without timezone
 
 -- Converting strings and unix timestamps
 SELECT from_iso8601_date('2015-02-14'); -- convert iso8601 string into date
+SELECT to_iso8601(current_timestamp); -- convert date, timestamp, or timestamp with timezone to varchar iso8601 format
 
 SELECT from_unixtime(1672955101); -- convert epoch milliseconds to timestamp
-
 SELECT to_unixtime(localtimestamp); -- convert timestamp to a unix epoch timestamp 
 
 -- date_trunc(unit,x) -> returns x truncated to the unit
